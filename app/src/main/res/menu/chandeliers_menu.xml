@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/item_chantilly_chandelier"
+        android:title="Chantilly Chandelier"
+        />
+
+    <item android:id="@+id/item_gothic_chandelier"
+        android:title="Gothic Chandelier"
+        />
+
+    <item android:id="@+id/item_powder_boom_chandelier"
+        android:title="Powderboom Chandelier"
+        />
+
+    <item android:id="@+id/item_primitive_chandelier"
+        android:title="Primitive Chandelier"
+        />
+
+    <item android:id="@+id/item_small_chateau_chandelier"
+        android:title="Small Chateau Chandelier"
+        />
+
+</menu>

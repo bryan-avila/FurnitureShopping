@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_charmont_mirror"
+        android:title="Charmont Mirror"
+        />
+
+    <item android:id="@+id/item_von_howe"
+        android:title="Von Howe Mirror"
+        />
+
+</menu>

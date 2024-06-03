@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/item_english_arm_chair"
+        android:title="English Arm Chair"
+        />
+
+    <item android:id="@+id/item_loren_arm_chair"
+        android:title="Loren Arm Chair"
+        />
+
+    <item android:id="@+id/item_louis_bar_chair"
+        android:title="Louis Bar Chair"
+        />
+
+    <item android:id="@+id/item_louis_dining_chair"
+        android:title="Louis Dining Chair"
+        />
+
+    <item android:id="@+id/item_louis_fireside_chair"
+        android:title="Louis FireSide Chair"
+        />
+
+    <item android:id="@+id/item_louis_library_chair"
+        android:title="Louis Library Chair"
+        />
+
+    <item android:id="@+id/item_louis_side_chair"
+        android:title="Louis Side Chair"
+        />
+
+    <item android:id="@+id/item_montalembert_chair"
+        android:title="Montalembert Chair"
+        />
+
+
+    <item android:id="@+id/item_queen_anne_chair"
+        android:title="Queen Anee Chair"
+        />
+
+
+    <item android:id="@+id/item_tiges_chair"
+        android:title="Tiges Arm Chair"
+        />
+</menu>
