@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".without_images_home_page_sorted"
+            android:exported="false" />
+        <activity
             android:name=".without_images_furniture_viewing"
             android:exported="false" />
         <activity

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_von_howe_mirror_price_sorted"
+        android:title="Von Howe Mirror - $1500"
+        />
+
+    <item android:id="@+id/item_charmont_mirror_price_sorted"
+        android:title="Charmont Mirror - $1400"
+        />
+
+</menu>

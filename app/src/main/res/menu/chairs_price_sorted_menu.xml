@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_louis_fireside_chair_price_sorted"
+        android:title="Louis Fireside Chair - $5500"
+        />
+
+    <item android:id="@+id/item_tiges_chair_price_sorted"
+        android:title="Tiges Arm Chair - $1900"
+        />
+
+    <item android:id="@+id/item_montalembert_chair_price_sorted"
+        android:title="Montalembert Chair - $1800"
+        />
+
+    <item android:id="@+id/item_louis_library_chair_price_sorted"
+        android:title="Louis Library Chair - $1800"
+        />
+
+    <item android:id="@+id/item_queen_anne_chair_price_sorted"
+        android:title="Queen Anne Chair - $1700"
+        />
+
+    <item android:id="@+id/item_english_arm_chair_price_sorted"
+        android:title="English Arm Chair - $1500"
+        />
+
+    <item android:id="@+id/item_loren_arm_chair_price_sorted"
+        android:title="Loren Arm Chair - $1300"
+        />
+
+    <item android:id="@+id/item_louis_side_chair_price_sorted"
+        android:title="Louis Side Chair - $1200"
+        />
+
+    <item android:id="@+id/item_louis_bar_chair_price_sorted"
+        android:title="Louis Bar Chair - $1000"
+        />
+
+    <item android:id="@+id/item_louis_dining_price_sorted"
+        android:title="Louis Dining Chair - $1000"
+        />
+
+</menu>

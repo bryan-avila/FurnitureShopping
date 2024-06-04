@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_spanish_oval_table_price_sorted"
+        android:title="Spanish Oval Table - $3500"
+        />
+
+    <item android:id="@+id/item_antibes_cocktail_table_price_sorted"
+        android:title="Antibes Cocktail Table - $2500"
+        />
+
+    <item android:id="@+id/item_chow_side_table_price_sorted"
+        android:title="Chow Side Table - $1750"
+        />
+
+    <item android:id="@+id/item_windsor_hexagonal_table_price_sorted"
+        android:title="Windsor Hexagonal Table - $1500"
+        />
+
+    <item android:id="@+id/item_balustrade_base_table_price_sorted"
+        android:title="Balustrade Base Table - $1000"
+        />
+
+</menu>

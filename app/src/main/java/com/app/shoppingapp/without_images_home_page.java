@@ -1,7 +1,5 @@
 package com.app.shoppingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class without_images_home_page extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
@@ -28,8 +28,7 @@ public class without_images_home_page extends AppCompatActivity implements Popup
         return true;
     }
 
-
-    // Give functionality to clicking on the menu
+    // Give functionality to clicking on the top bar menu sorting options
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -42,7 +41,7 @@ public class without_images_home_page extends AppCompatActivity implements Popup
         // Give functionality to the sort price
         else if(item.getItemId() == R.id.menu_item_price_sort)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_home_page.class);
+            Intent intent = new Intent(without_images_home_page.this, without_images_home_page_sorted.class);
             Toast.makeText(this, "Sorted By Price", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             return true;
@@ -58,258 +57,148 @@ public class without_images_home_page extends AppCompatActivity implements Popup
             return super.onOptionsItemSelected(item);
     }
 
+    // Whichever furniture the user clicks, send it's data to without_images_furniture_viewing. Uses sendSelectedFurniture function to do so.
     @Override
     public boolean onMenuItemClick(MenuItem item) {
 
         // CHAIR SELECTIONS--------------
         if(item.getItemId() == R.id.item_louis_library_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "louis_library");
-            intent.putExtra("page", "alpha_sorted");
-            startActivity(intent);
-            return true;
-
+            return sendSelectedFurniture("choice", "louis_library", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_english_arm_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "english_arm");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "english_arm", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_loren_arm_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "loren_arm");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "loren_arm", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_louis_bar_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "louis_bar");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "louis_bar", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_louis_dining_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "louis_dining");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "louis_dining", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_louis_fireside_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "louis_fireside");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "louis_fireside", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_louis_side_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "louis_side");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "louis_side", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_montalembert_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "montalembert");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "montalembert", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_queen_anne_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "queen_anne");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "queen_anne", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_tiges_chair)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "tiges_arm");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "tiges_arm", "page", "alpha_sorted");
         }
-
 
         // TABLE SELECTIONS-------------------
         else if(item.getItemId() == R.id.item_chow_side_table)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "chow_side");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "chow_side", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_antibes_cocktail_Table)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "antibes_cocktail");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "antibes_cocktail", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_balustrade_base_table)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "balustrade_base");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "balustrade_base", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_spanish_oval_table)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "spanish_oval");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "spanish_oval", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_windsor_hexagonal)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "windsor_hexagonal");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "windsor_hexagonal", "page", "alpha_sorted");
         }
 
         // MIRROR SELECTIONS----------------
         else if(item.getItemId() == R.id.item_charmont_mirror)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "charmont");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "charmont", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_von_howe)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "von_howe");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "von_howe", "page", "alpha_sorted");
         }
 
         // SOFA SELECTIONS--------------------
         else if(item.getItemId() == R.id.item_gainsborough_sofa)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "gainsborough");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "gainsborough", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_lancaster_sofa)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "lancaster");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "lancaster", "page", "alpha_sorted");
         }
 
         // CHANDELIER SELECTIONS--------------
         else if(item.getItemId() == R.id.item_chantilly_chandelier)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "chantilly");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "chantilly", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_gothic_chandelier)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "gothic");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "gothic", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_powder_boom_chandelier)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "powder_boom");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "powder_boom", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_primitive_chandelier)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "primitive");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "primitive", "page", "alpha_sorted");
         }
 
         else if(item.getItemId() == R.id.item_small_chateau_chandelier)
         {
-            Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
-            intent.putExtra("choice", "small_chateau");
-            intent.putExtra("page", "alpha_sorted");
-
-            startActivity(intent);
-            return true;
+            return sendSelectedFurniture("choice", "small_chateau", "page", "alpha_sorted");
         }
 
         // END OF IF STATEMENTS----------------------
         else
             return false;
+    }
+
+    // Function that sends the chosen furniture's information to without_images_furniture_viewing as intent extras
+    public boolean sendSelectedFurniture(String furnKey, String furnName, String pageKey, String pageName){
+
+        Intent intent = new Intent(without_images_home_page.this, without_images_furniture_viewing.class);
+        intent.putExtra(furnKey, furnName);
+        intent.putExtra(pageKey, pageName);
+        startActivity(intent);
+        return true;
     }
 
     public void showChairsPopUp(View view) {

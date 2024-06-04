@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item_primitive_chandelier_price_sorted"
+        android:title="Primitve Chandelier - $1900"
+        />
+
+    <item android:id="@+id/item_small_chateau_chandelier_price_sorted"
+        android:title="Small Chateau Chandelier - $1900"
+        />
+
+    <item android:id="@+id/item_gothic_chandelier_price_sorted"
+        android:title="Gothic Chandelier - $1800"
+        />
+
+    <item android:id="@+id/item_powder_boom_chandelier_price_sorted"
+        android:title="Powder Boom Chandelier - $1600"
+        />
+
+    <item android:id="@+id/item_chantilly_chandelier_price_sorted"
+        android:title="Chantilly Chandelier - $1400"
+        />
+
+</menu>
