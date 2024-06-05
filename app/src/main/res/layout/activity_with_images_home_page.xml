@@ -1,9 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/buy_furn_2_background"
+    android:background="@drawable/background_with_images_basic_gradient"
     tools:context=".with_images_home_page">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Select Category"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--  Chair Category -->
+    <ImageView
+        android:id="@+id/image_view_chair_category"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:src="@drawable/chair_category_default"
+        android:onClick="onChairClick"
+        android:contentDescription="chair category"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <!-- Chandelier Category -->
+    <ImageView
+        android:id="@+id/image_view_chandelier_category"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:src="@drawable/chandelier_category_default"
+        android:onClick="onChandelierClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <!-- Table Category -->
+    <ImageView
+        android:id="@+id/image_view_table_category"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:onClick="onTableClick"
+        android:src="@drawable/table_category_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <!-- Mirror Category -->
+    <ImageView
+        android:id="@+id/image_view_mirror_category"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:onClick="onMirrorClick"
+        android:src="@drawable/mirror_category_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <!-- SOFA Category -->
+    <ImageView
+        android:id="@+id/image_view_sofa_category"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:onClick="onSofaClick"
+        android:src="@drawable/sofa_category_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.927" />
+
+    <!-- View Cart Button -->
+    <Button
+        android:id="@+id/button_with_images_view_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darker_grey"
+        android:drawableTop="@drawable/baseline_shopping_cart_white_24"
+        android:text="Shopping Cart"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:onClick="onShoppingCartClick"
+        android:padding="1sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+    <!-- Sort by Price Button -->
+    <Button
+        android:id="@+id/button_with_images_sort_price"
+        android:layout_width="110sp"
+        android:layout_height="wrap_content"
+        android:background="@color/darker_grey"
+        android:drawableBottom="@drawable/baseline_price_change_24"
+        android:text="Sort By Price"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:clickable="true"
+        android:onClick="onPriceSortClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.948" />
+
+    <!-- Sort By Alpha Button -->
+    <Button
+        android:id="@+id/button_with_images_sort_alpha"
+        android:layout_width="110sp"
+        android:layout_height="wrap_content"
+        android:background="@color/darker_grey"
+        android:drawableBottom="@drawable/baseline_sort_by_alpha_24"
+        android:text="Sort By Alpha"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:clickable="true"
+        android:onClick="onAlphaSortClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

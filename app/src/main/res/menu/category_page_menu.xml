@@ -3,22 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-    <item android:id="@+id/menu_item_1"
-        android:icon="@drawable/baseline_history_24"
+    <item android:id="@+id/menu_item_shopping_cart"
+        android:icon="@drawable/baseline_shopping_cart_white_24"
         android:title="Shopping"
         android:tooltipText="Shopping History"
         app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/menu_item_price_sort"
-        android:icon="@drawable/baseline_sort_24"
-        app:showAsAction="never"
+        android:icon="@drawable/baseline_price_change_24"
         android:title="Sort By Price"
+        android:tooltipText="Sort By Price"
+        app:showAsAction="ifRoom"
         />
 
     <item android:id="@+id/menu_item_alpha_sort"
-        android:icon="@drawable/baseline_sort_24"
-        app:showAsAction="never"
+        android:icon="@drawable/baseline_sort_by_alpha_24"
         android:title="Sort Alphabetically"
+        android:tooltipText="Sort By Alphabetically"
+        app:showAsAction="ifRoom"
         />
 
 

@@ -19,6 +19,7 @@ public class without_images_furniture_viewing extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_without_images_furniture_viewing);
+        getSupportActionBar().setTitle("Fitt's Furniture");
 
         // Get information from intent passed from without_images_home_page.java
         Bundle bundle = getIntent().getExtras();
@@ -123,7 +124,7 @@ public class without_images_furniture_viewing extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.home_page_menu, menu);
+        inflater.inflate(R.menu.furniture_view_menu, menu);
         return true;
     }
 

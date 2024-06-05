@@ -17,6 +17,7 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_without_images_home_page_sorted);
+        getSupportActionBar().setTitle("Fitt's Furniture");
     }
 
     // Display menu in home page
@@ -24,7 +25,7 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.example_menu, menu);
+        inflater.inflate(R.menu.category_page_menu, menu);
         return true;
     }
     @Override
@@ -209,25 +210,24 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if(item.getItemId() == R.id.menu_item_1)
+        if(item.getItemId() == R.id.menu_item_shopping_cart)
         {
-            Intent intent = new Intent(without_images_home_page_sorted.this, without_images_home_page_sorted.class);
-            startActivity(intent);
+            Toast.makeText(this, "Shopping Cart Not Yet Implemented", Toast.LENGTH_SHORT).show();
             return true;
         }
         // Give functionality to the sort price
         else if(item.getItemId() == R.id.menu_item_price_sort)
         {
-            Intent intent = new Intent(without_images_home_page_sorted.this, without_images_home_page.class);
-            startActivity(intent);
+            Toast.makeText(this, "Already sorted by price!", Toast.LENGTH_SHORT).show();
             return true;
         }
         // Give functionality to sort alphabetically
         else if(item.getItemId() == R.id.menu_item_alpha_sort)
         {
             Intent intent = new Intent(without_images_home_page_sorted.this, without_images_home_page.class);
-            Toast.makeText(this, "Sorted Alphabetically", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorted Alphabetically", Toast.LENGTH_LONG).show();
             startActivity(intent);
+            finish(); // Prevent users from going back via back button
             return true;
         }
         else
