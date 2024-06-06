@@ -26,8 +26,8 @@
 
     <Button
         android:id="@+id/button_chairs_pop_up"
-        android:layout_width="170sp"
-        android:layout_height="90sp"
+        android:layout_width="170dp"
+        android:layout_height="90dp"
         android:background="@drawable/oval"
         android:onClick="showChairsPopUp"
         android:text="Chairs"
@@ -43,8 +43,8 @@
 
     <Button
         android:id="@+id/button_tables_pop_up"
-        android:layout_width="170sp"
-        android:layout_height="90sp"
+        android:layout_width="170dp"
+        android:layout_height="90dp"
         android:background="@drawable/oval"
         android:onClick="showTablesPopUp"
         android:textAllCaps="false"
@@ -60,8 +60,8 @@
 
     <Button
         android:id="@+id/button_mirrors_pop_up"
-        android:layout_width="170sp"
-        android:layout_height="90sp"
+        android:layout_width="170dp"
+        android:layout_height="90dp"
         android:background="@drawable/oval"
         android:onClick="showMirrorsPopUp"
         android:text="Mirrors"
@@ -77,8 +77,8 @@
 
     <Button
         android:id="@+id/button_chandeliers_pop_up"
-        android:layout_width="170sp"
-        android:layout_height="90sp"
+        android:layout_width="170dp"
+        android:layout_height="90dp"
         android:background="@drawable/oval"
         android:onClick="showChandeliersPopUp"
         android:text="Chandeliers"
@@ -94,8 +94,8 @@
 
     <Button
         android:id="@+id/button_sofas_pop_up"
-        android:layout_width="170sp"
-        android:layout_height="90sp"
+        android:layout_width="170dp"
+        android:layout_height="90dp"
         android:background="@drawable/oval"
         android:onClick="showSofaPopUp"
         android:text="Sofas"

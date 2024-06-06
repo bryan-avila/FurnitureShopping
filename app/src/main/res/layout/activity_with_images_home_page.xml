@@ -107,7 +107,7 @@
         android:textColor="@color/white"
         android:textSize="11sp"
         android:onClick="onShoppingCartClick"
-        android:padding="1sp"
+        android:padding="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -118,11 +118,11 @@
     <!-- Sort by Price Button -->
     <Button
         android:id="@+id/button_with_images_sort_price"
-        android:layout_width="110sp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:background="@color/darker_grey"
         android:drawableBottom="@drawable/baseline_price_change_24"
-        android:text="Sort By Price"
+        android:text="Price Sort"
         android:textColor="@color/white"
         android:visibility="visible"
         android:clickable="true"
@@ -137,11 +137,11 @@
     <!-- Sort By Alpha Button -->
     <Button
         android:id="@+id/button_with_images_sort_alpha"
-        android:layout_width="110sp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:background="@color/darker_grey"
         android:drawableBottom="@drawable/baseline_sort_by_alpha_24"
-        android:text="Sort By Alpha"
+        android:text="Alpha Sort"
         android:textColor="@color/white"
         android:visibility="visible"
         android:clickable="true"

@@ -99,8 +99,8 @@
                 android:drawableTop="@drawable/ic_shopping_cart"
                 android:fontFamily="sans-serif-black"
                 android:onClick="onPurchaseClick"
-                android:paddingTop="2sp"
-                android:paddingBottom="2sp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
                 android:text="Add To Cart"
                 android:textAllCaps="false"
                 android:textSize="20sp" />

@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/without_button"
-        android:layout_width="140sp"
-        android:layout_height="60sp"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
         android:text="With Images"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,8 +35,8 @@
 
     <Button
         android:id="@+id/with_button"
-        android:layout_width="140sp"
-        android:layout_height="60sp"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
         android:text="Without Images"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

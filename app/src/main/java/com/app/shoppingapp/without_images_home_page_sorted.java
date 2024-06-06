@@ -1,7 +1,5 @@
 package com.app.shoppingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class without_images_home_page_sorted extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 

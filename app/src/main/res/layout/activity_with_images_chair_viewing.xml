@@ -1,9 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".with_images_chair_viewing">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHAIRS"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_english_arm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_english_arm"
+                android:layout_marginTop="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onEnglishArmClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_loren_arm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_loren_arm"
+                android:layout_toRightOf="@id/with_images_english_arm"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLorenArmClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_bar"
+                android:layout_toRightOf="@id/with_images_loren_arm"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisBarClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_dining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_dining"
+                android:layout_marginTop="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisDiningClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_fireside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_fireside_wing_ottoman_combo"
+                android:layout_toRightOf="@id/with_images_louis_dining"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onFireSideClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_library"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_library"
+                android:layout_marginTop="500dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisLibraryClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_side"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_side"
+                android:layout_marginTop="500dp"
+                android:layout_toRightOf="@id/with_images_louis_library"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisSideClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_montalembert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_montalembert"
+                android:layout_marginTop="500dp"
+                android:layout_toRightOf="@id/with_images_louis_side"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onMontalembertClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_queen_anne"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:src="@drawable/chair_queen_anne_arm"
+                android:layout_marginTop="720dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onQueenAnneClick"
+                />
+
+
+            <ImageView
+                android:id="@+id/with_images_tiges_arm"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:src="@drawable/chair_tiges_armchair"
+                android:layout_marginTop="720dp"
+                android:layout_toRightOf="@id/with_images_queen_anne"
+                android:layout_marginLeft="50dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onTigesArmClick"
+                />
+
+
+            <!-- Sorted By Price -->
+            <!-- Sorted By Price -->
+            <!-- Sorted By Price -->
+            <ImageView
+                android:id="@+id/with_images_english_arm_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_english_arm"
+                android:layout_marginTop="500dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onEnglishArmClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_loren_arm_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_loren_arm"
+                android:layout_marginTop="500dp"
+                android:layout_toRightOf="@id/with_images_english_arm_sorted"
+                android:layout_marginLeft="50dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLorenArmClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_bar_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_bar"
+                android:layout_marginTop="500dp"
+                android:layout_toRightOf="@id/with_images_loren_arm_sorted"
+                android:layout_marginLeft="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisBarClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_dining_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_dining"
+                android:layout_marginTop="720dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisDiningClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_fireside_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_fireside_wing_ottoman_combo"
+                android:layout_marginTop="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onFireSideClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_library_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chair_louis_library"
+                android:layout_marginTop="275dp"
+                android:layout_toRightOf="@id/with_images_montalembert_sorted"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisLibraryClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_louis_side_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="720dp"
+                android:layout_toRightOf="@id/with_images_louis_dining_sorted"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/chair_louis_side"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onLouisSideClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_montalembert_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="275dp"
+                android:src="@drawable/chair_montalembert"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onMontalembertClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_queen_anne_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:src="@drawable/chair_queen_anne_arm"
+                android:layout_toRightOf="@id/with_images_louis_library_sorted"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onQueenAnneClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_tiges_arm_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:src="@drawable/chair_tiges_armchair"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@id/with_images_louis_fireside_sorted"
+                android:layout_marginLeft="50dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onTigesArmClick"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>
