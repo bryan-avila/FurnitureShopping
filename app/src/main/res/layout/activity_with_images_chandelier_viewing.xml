@@ -1,8 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".with_images_chandelier_viewing">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHANDELIERS"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="serif"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!-- Sofas sorted by alpha -->
+
+            <ImageView
+                android:id="@+id/with_images_chantilly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_chantilly"
+                android:layout_marginTop="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onChantillyClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_gothic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_gothic"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="180dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onGothicClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_powder_boom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_powder_boom"
+                android:layout_marginTop="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onPowderBoomClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_primitive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_primitive"
+                android:layout_marginTop="275dp"
+                android:layout_marginLeft="130dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onPrimitiveClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_small_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_small_chateau"
+                android:layout_marginTop="275dp"
+                android:layout_marginLeft="270dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onSmallChatClick"
+                />
+
+            <!-- Sofas sorted by price -->
+            <ImageView
+                android:id="@+id/with_images_primitive_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="35dp"
+                android:clickable="false"
+                android:onClick="onPrimitiveClick"
+                android:src="@drawable/chandelier_primitive"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/with_images_small_chat_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_small_chateau"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="250dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onSmallChatClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_gothic_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_gothic"
+                android:layout_marginTop="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onGothicClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_powder_boom_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_powder_boom"
+                android:layout_marginTop="275dp"
+                android:layout_marginLeft="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onPowderBoomClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_chantilly_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chandelier_chantilly"
+                android:layout_marginTop="475dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onChantillyClick"
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

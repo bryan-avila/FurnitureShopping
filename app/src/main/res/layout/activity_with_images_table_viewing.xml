@@ -1,8 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".with_images_table_viewing">
+    tools:context=".with_images_chandelier_viewing">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TABLES"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="serif"
+                android:layout_centerHorizontal="true"
+                />
+
+            <!-- Sofas sorted by alpha -->
+
+            <ImageView
+                android:id="@+id/with_images_antibes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_antibes_cocktail"
+                android:layout_marginTop="55dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onAntibesClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_balustrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_balustrade_base"
+                android:layout_marginTop="55dp"
+                android:layout_toRightOf="@id/with_images_antibes"
+                android:layout_marginLeft="80dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onBalustradeClick"
+                />
+
+
+            <ImageView
+                android:id="@+id/with_images_chowside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_chow_side"
+                android:layout_marginTop="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onChowsideClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_windsor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_windsor_hexagonal"
+                android:layout_marginTop="275dp"
+                android:layout_toRightOf="@id/with_images_chowside"
+                android:layout_marginLeft="80dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onWindsorClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_spanish_oval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_spanish_oval_dining"
+                android:layout_marginTop="475dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onSpanishOvalClick"
+                />
+
+            <!-- Sofas sorted by alpha -->
+            <!-- Spanish, Antibes, Chow, Windsor, Balustrade -->
+
+            <ImageView
+                android:id="@+id/with_images_spanish_oval_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_spanish_oval_dining"
+                android:layout_marginTop="55dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onSpanishOvalClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_antibes_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_antibes_cocktail"
+                android:layout_marginTop="275dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onAntibesClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_chowside_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_chow_side"
+                android:layout_marginTop="500dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onChowsideClick"
+                />
+
+
+            <ImageView
+                android:id="@+id/with_images_windsor_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_windsor_hexagonal"
+                android:layout_marginTop="500dp"
+                android:layout_marginLeft="150dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onWindsorClick"
+                />
+
+            <ImageView
+                android:id="@+id/with_images_balustrade_sorted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/table_balustrade_base"
+                android:layout_marginTop="500dp"
+                android:layout_marginLeft="275dp"
+                android:visibility="invisible"
+                android:clickable="false"
+                android:onClick="onBalustradeClick"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</LinearLayout>

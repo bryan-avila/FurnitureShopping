@@ -18,6 +18,9 @@ public class with_images_home_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_with_images_home_page);
 
+        getSupportActionBar().setTitle("Fitt's Furniture");
+
+
         // The default sorting is alphabetically. Signify this with color.
         selected_alpha_sort = findViewById(R.id.button_with_images_sort_alpha);
         selected_alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
@@ -62,22 +65,26 @@ public class with_images_home_page extends AppCompatActivity {
 
     public void onTableClick(View view) {
         Intent intent = new Intent(with_images_home_page.this, with_images_table_viewing.class);
+        intent.putExtra("sorting_choice", sorting_choice);
         startActivity(intent);
     }
 
     public void onChandelierClick(View view) {
         Intent intent = new Intent(with_images_home_page.this, with_images_chandelier_viewing.class);
+        intent.putExtra("sorting_choice", sorting_choice);
         startActivity(intent);
     }
 
 
     public void onMirrorClick(View view) {
         Intent intent = new Intent(with_images_home_page.this, with_images_mirror_viewing.class);
+        intent.putExtra("sorting_choice", sorting_choice);
         startActivity(intent);
     }
 
     public void onSofaClick(View view) {
         Intent intent = new Intent(with_images_home_page.this, with_images_sofa_viewing.class);
+        intent.putExtra("sorting_choice", sorting_choice);
         startActivity(intent);
     }
 
