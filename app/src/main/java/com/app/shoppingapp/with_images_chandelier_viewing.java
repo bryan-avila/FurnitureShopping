@@ -1,5 +1,6 @@
 package com.app.shoppingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,12 +16,11 @@ public class with_images_chandelier_viewing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_with_images_chandelier_viewing);
 
-        getSupportActionBar().setTitle("Fitt's Furniture");
+        getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
 
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
         String sorting_choice = bundle.getString("sorting_choice");
-        Toast.makeText(with_images_chandelier_viewing.this, sorting_choice, Toast.LENGTH_SHORT).show();
         displaySortedItems(sorting_choice);
     }
 
@@ -69,32 +69,37 @@ public class with_images_chandelier_viewing extends AppCompatActivity {
 
     }
     public void onChantillyClick(View view) {
-        Toast.makeText(with_images_chandelier_viewing.this, "Chantilly", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chandelier_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "chantilly");
+        intent.putExtra("page", "chandelier");
+        startActivity(intent);
     }
 
     public void onGothicClick(View view) {
-        Toast.makeText(with_images_chandelier_viewing.this, "Gothic", Toast.LENGTH_SHORT).show();
-
-
+        Intent intent = new Intent(with_images_chandelier_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "gothic");
+        intent.putExtra("page", "chandelier");
+        startActivity(intent);
     }
 
     public void onPowderBoomClick(View view) {
-        Toast.makeText(with_images_chandelier_viewing.this, "Powder Boom", Toast.LENGTH_SHORT).show();
-
-
+        Intent intent = new Intent(with_images_chandelier_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "powder_boom");
+        intent.putExtra("page", "chandelier");
+        startActivity(intent);
     }
 
     public void onPrimitiveClick(View view) {
-        Toast.makeText(with_images_chandelier_viewing.this, "Primitive", Toast.LENGTH_SHORT).show();
-
-
-
+        Intent intent = new Intent(with_images_chandelier_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "primitive");
+        intent.putExtra("page", "chandelier");
+        startActivity(intent);
     }
 
     public void onSmallChatClick(View view) {
-        Toast.makeText(with_images_chandelier_viewing.this, "small Chat", Toast.LENGTH_SHORT).show();
-
-
+        Intent intent = new Intent(with_images_chandelier_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "small_chateau");
+        intent.putExtra("page", "chandelier");
+        startActivity(intent);
     }
 }

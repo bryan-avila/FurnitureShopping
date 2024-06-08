@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".with_images_furniture_viewing"
+            android:exported="false" />
+        <activity
             android:name=".with_images_mirror_viewing"
             android:exported="false" />
         <activity

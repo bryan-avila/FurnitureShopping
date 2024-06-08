@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_with_images_basic_gradient"
     tools:context=".with_images_sofa_viewing">
 
     <ScrollView
@@ -21,8 +22,8 @@
                 android:textSize="35sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
+                android:fontFamily="serif"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
                 />
 
             <!-- Sofas sorted by alpha -->
@@ -51,7 +52,7 @@
                 android:onClick="onLancasterClick"
                 />
 
-            <!-- Sofas sorted by alpha -->
+            <!-- Sofas sorted by PRICE -->
 
             <ImageView
                 android:id="@+id/with_images_lancaster_sorted"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_with_images_basic_gradient"
     tools:context=".with_images_chandelier_viewing">
 
     <ScrollView
@@ -33,9 +34,22 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_antibes_cocktail"
                 android:layout_marginTop="55dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onAntibesClick"
+                />
+
+            <TextView
+                android:id="@+id/myImageViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_antibes"
+                android:layout_alignTop="@+id/with_images_antibes"
+                android:layout_alignRight="@+id/with_images_antibes"
+                android:layout_alignBottom="@+id/with_images_antibes"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
                 />
 
             <ImageView
@@ -43,9 +57,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_balustrade_base"
-                android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/with_images_antibes"
-                android:layout_marginLeft="80dp"
+                android:layout_marginTop="275dp"
+                android:layout_alignParentStart="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onBalustradeClick"
@@ -58,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_chow_side"
                 android:layout_marginTop="275dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onChowsideClick"
@@ -69,8 +83,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_windsor_hexagonal"
                 android:layout_marginTop="275dp"
-                android:layout_toRightOf="@id/with_images_chowside"
-                android:layout_marginLeft="80dp"
+                android:layout_alignParentEnd="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onWindsorClick"
@@ -82,12 +95,13 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_spanish_oval_dining"
                 android:layout_marginTop="475dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onSpanishOvalClick"
                 />
 
-            <!-- Sofas sorted by alpha -->
+            <!-- Sofas sorted by PRICE -->
             <!-- Spanish, Antibes, Chow, Windsor, Balustrade -->
 
             <ImageView
@@ -119,6 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_chow_side"
+                android:layout_alignParentStart="true"
                 android:layout_marginTop="500dp"
                 android:visibility="invisible"
                 android:clickable="false"
@@ -132,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_windsor_hexagonal"
                 android:layout_marginTop="500dp"
-                android:layout_marginLeft="150dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onWindsorClick"
@@ -144,7 +159,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/table_balustrade_base"
                 android:layout_marginTop="500dp"
-                android:layout_marginLeft="275dp"
+                android:layout_alignParentEnd="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onBalustradeClick"

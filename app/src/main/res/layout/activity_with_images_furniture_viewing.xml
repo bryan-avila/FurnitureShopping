@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_full_grey"
-    tools:context=".without_images_furniture_viewing">
+    tools:context=".with_images_furniture_viewing">
 
     <TextView
-        android:id="@+id/text_view_furniture_product_name"
+        android:id="@+id/text_view_furniture_product_name_ver_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.049" />
 
     <ImageView
-        android:id="@+id/image_view"
+        android:id="@+id/image_view_ver_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardView_ver_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="8dp"
@@ -60,7 +60,7 @@
             app:layout_constraintVertical_bias="0.922">
 
             <TextView
-                android:id="@+id/item_view_price"
+                android:id="@+id/item_view_price_ver_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -70,7 +70,7 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/item_view_material_finish"
+                android:id="@+id/item_view_material_finish_ver_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -81,7 +81,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/item_view_estimed_time_arrival"
+                android:id="@+id/item_view_estimed_time_arrival_ver_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -92,7 +92,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button_purchase_product"
+                android:id="@+id/button_purchase_product_ver_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/pumpkin_orange"

@@ -1,5 +1,6 @@
 package com.app.shoppingapp;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -18,12 +19,11 @@ public class with_images_table_viewing extends AppCompatActivity {
         setContentView(R.layout.activity_with_images_table_viewing);
 
 
-        getSupportActionBar().setTitle("Fitt's Furniture");
+        getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
 
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
         String sorting_choice = bundle.getString("sorting_choice");
-        Toast.makeText(with_images_table_viewing.this, sorting_choice, Toast.LENGTH_SHORT).show();
         displaySortedItems(sorting_choice);
     }
 
@@ -72,24 +72,38 @@ public class with_images_table_viewing extends AppCompatActivity {
     }
 
     public void onAntibesClick(View view) {
-
-        Toast.makeText(with_images_table_viewing.this, "Antibes", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_table_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "antibes_cocktail");
+        intent.putExtra("page", "table");
+        startActivity(intent);
     }
 
     public void onBalustradeClick(View view) {
-        Toast.makeText(with_images_table_viewing.this, "Balustrade", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_table_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "balustrade_base");
+        intent.putExtra("page", "table");
+        startActivity(intent);
     }
 
     public void onChowsideClick(View view) {
-        Toast.makeText(with_images_table_viewing.this, "Chowside", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_table_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "chow_side");
+        intent.putExtra("page", "table");
+        startActivity(intent);
     }
 
     public void onWindsorClick(View view) {
-        Toast.makeText(with_images_table_viewing.this, "Windsor", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_table_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "windsor_hexagonal");
+        intent.putExtra("page", "table");
+        startActivity(intent);
     }
 
     public void onSpanishOvalClick(View view) {
-        Toast.makeText(with_images_table_viewing.this, "Spanish Oval", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_table_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "spanish_oval");
+        intent.putExtra("page", "table");
+        startActivity(intent);
     }
 
 }

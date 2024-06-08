@@ -1,5 +1,6 @@
 package com.app.shoppingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -20,12 +21,11 @@ public class with_images_chair_viewing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_with_images_chair_viewing);
 
-        getSupportActionBar().setTitle("Fitt's Furniture");
+        getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
 
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
         String sorting_choice = bundle.getString("sorting_choice");
-        Toast.makeText(with_images_chair_viewing.this, sorting_choice, Toast.LENGTH_SHORT).show();
         displaySortedItems(sorting_choice);
 
     }
@@ -107,55 +107,76 @@ public class with_images_chair_viewing extends AppCompatActivity {
     }
 
     public void onEnglishArmClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "English Arm", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "english_arm");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
     }
 
     public void onLorenArmClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Loren Arm", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "loren_arm");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
     }
 
     public void onLouisBarClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Louis Bar", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "louis_bar");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
     }
 
     public void onLouisDiningClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Louis Dining", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "louis_dining");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
     }
 
     public void onFireSideClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Fireside", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "louis_fireside");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
     }
 
     public void onLouisLibraryClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Louis Library", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "louis_library");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
 
     }
 
     public void onLouisSideClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Louis Side", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "louis_side");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
     }
 
     public void onMontalembertClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Montalembert", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "montalembert");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
 
     }
 
     public void onQueenAnneClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Queen Anne", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "queen_anne");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
 
     }
 
     public void onTigesArmClick(View view) {
-        Toast.makeText(with_images_chair_viewing.this, "Tiges Arm", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "tiges_arm");
+        intent.putExtra("page", "chairs");
+        startActivity(intent);
 
     }
 }

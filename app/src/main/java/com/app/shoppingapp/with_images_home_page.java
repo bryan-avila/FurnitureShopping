@@ -18,7 +18,7 @@ public class with_images_home_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_with_images_home_page);
 
-        getSupportActionBar().setTitle("Fitt's Furniture");
+        getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
 
 
         // The default sorting is alphabetically. Signify this with color.

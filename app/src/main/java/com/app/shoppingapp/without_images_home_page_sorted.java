@@ -17,7 +17,7 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_without_images_home_page_sorted);
-        getSupportActionBar().setTitle("Fitt's Furniture");
+        getSupportActionBar().setTitle("Fitt's Furniture (Menu...)");
     }
 
     // Display menu in home page

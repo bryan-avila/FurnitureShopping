@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_with_images_basic_gradient"
     tools:context=".with_images_mirror_viewing">
 
     <ScrollView
@@ -23,7 +24,6 @@
                 android:textColor="@color/black"
                 android:fontFamily="serif"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
                 />
 
             <!-- Sofas sorted by alpha -->
@@ -33,8 +33,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mirror_charmont"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="300dp"
+                android:layout_marginStart="50dp"
+                android:layout_centerVertical="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onCharmontClick"
@@ -45,23 +45,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mirror_von_howe"
-                android:layout_marginTop="300dp"
-                android:layout_toRightOf="@id/with_images_charmont"
-                android:layout_marginLeft="90dp"
+                android:layout_marginStart="235dp"
+                android:layout_centerVertical="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onVonHoweClick"
                 />
 
-            <!-- Sofas sorted by alpha -->
+            <!-- Sofas sorted by PRICE -->
 
             <ImageView
                 android:id="@+id/with_images_von_howe_sorted"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mirror_von_howe"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="300dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onVonHoweClick"
@@ -72,12 +71,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mirror_charmont"
-                android:layout_toRightOf="@id/with_images_von_howe_sorted"
-                android:layout_marginLeft="90dp"
-                android:layout_marginTop="300dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="235dp"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onCharmontClick"
+                />
+
+            <!-- Textview exists only to fix scroll view -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="550dp"
                 />
 
 

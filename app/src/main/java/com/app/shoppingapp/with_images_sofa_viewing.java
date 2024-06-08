@@ -1,5 +1,6 @@
 package com.app.shoppingapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,12 +16,11 @@ public class with_images_sofa_viewing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_with_images_sofa_viewing);
 
-        getSupportActionBar().setTitle("Fitt's Furniture");
+        getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
 
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
         String sorting_choice = bundle.getString("sorting_choice");
-        Toast.makeText(with_images_sofa_viewing.this, sorting_choice, Toast.LENGTH_SHORT).show();
         displaySortedItems(sorting_choice);
     }
 
@@ -51,11 +51,15 @@ public class with_images_sofa_viewing extends AppCompatActivity {
     }
 
     public void onGainsboroughClick(View view) {
-        Toast.makeText(with_images_sofa_viewing.this, "Gainsborough", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(with_images_sofa_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "gainsborough");
+        intent.putExtra("page", "sofa");
+        startActivity(intent);
     }
     public void onLancasterClick(View view) {
-        Toast.makeText(with_images_sofa_viewing.this, "Lancaster", Toast.LENGTH_SHORT).show();
-
-
+        Intent intent = new Intent(with_images_sofa_viewing.this, with_images_furniture_viewing.class);
+        intent.putExtra("choice", "lancaster");
+        intent.putExtra("page", "sofa");
+        startActivity(intent);
     }
 }

@@ -1,27 +1,24 @@
 package com.app.shoppingapp;
 
-import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class without_images_furniture_viewing extends AppCompatActivity {
+public class with_images_furniture_viewing extends AppCompatActivity {
 
     TextView product_price, product_eta, product_finish, furniture_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_without_images_furniture_viewing);
-        getSupportActionBar().setTitle("Fitt's Furniture (Menu Version)");
+        setContentView(R.layout.activity_with_images_furniture_viewing);
 
-        // Get information from intent passed from without_images_home_page.java
+        getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
+
+        // Get information from intent passed from chairs, chandeliers, tables, mirrors, or sofa
         Bundle bundle = getIntent().getExtras();
         String choice = bundle.getString("choice");
 
@@ -113,69 +110,29 @@ public class without_images_furniture_viewing extends AppCompatActivity {
         } else if (choice.equals("test")) {
             furniture_name.setText("Test", TextView.BufferType.EDITABLE);
             furniture_name.setEnabled(false);
-            ImageView imageView = findViewById(R.id.image_view);
+            ImageView imageView = findViewById(R.id.image_view_ver_2);
             imageView.setImageResource(R.drawable.wood_chair);
         }
 
     }
 
-    // Display menu for home page
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.furniture_view_menu, menu);
-        return true;
-    }
-
     // A function that displays the appropriate information
     public void setFurnitureInformation(String furnName, int furnPicture, String furnPrice, String furnETA, String furnMaterial) {
-        furniture_name = findViewById(R.id.text_view_furniture_product_name);
+        furniture_name = findViewById(R.id.text_view_furniture_product_name_ver_2);
         furniture_name.setText(furnName, TextView.BufferType.EDITABLE);
         furniture_name.setEnabled(false);
-        ImageView imageView = findViewById(R.id.image_view);
+        ImageView imageView = findViewById(R.id.image_view_ver_2);
         imageView.setImageResource(furnPicture);
-        product_price = findViewById(R.id.item_view_price);
+        product_price = findViewById(R.id.item_view_price_ver_2);
         product_price.setText(furnPrice);
-        product_eta = findViewById(R.id.item_view_estimed_time_arrival);
+        product_eta = findViewById(R.id.item_view_estimed_time_arrival_ver_2);
         product_eta.setText(furnETA);
-        product_finish = findViewById(R.id.item_view_material_finish);
+        product_finish = findViewById(R.id.item_view_material_finish_ver_2);
         product_finish.setText(furnMaterial);
     }
 
-
     public void onPurchaseClick(View view) {
-        Toast.makeText(without_images_furniture_viewing.this, "Bought!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(with_images_furniture_viewing.this, "Bought!", Toast.LENGTH_SHORT).show();
     }
 
-
-    // Give functionality to clicking on the menu
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        // Get information from intent
-        Bundle bundle = getIntent().getExtras();
-        String page_from = bundle.getString("page");
-
-
-        // If they came from price_sorted menu
-        if (page_from.equals("price_sorted") && item.getItemId() == R.id.menu_item_home_page) {
-
-            Intent intent = new Intent(without_images_furniture_viewing.this, without_images_home_page_sorted.class);
-            startActivity(intent);
-            return true;
-        }
-
-        // if they came from alpha sorted menu
-        else if(page_from.equals("alpha_sorted") && item.getItemId() == R.id.menu_item_home_page) {
-
-            Intent intent = new Intent(without_images_furniture_viewing.this, without_images_home_page.class);
-            startActivity(intent);
-            return true;
-        }
-
-        else
-            return super.onOptionsItemSelected(item);
-
-    }
 }
