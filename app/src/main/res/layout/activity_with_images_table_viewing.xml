@@ -41,15 +41,17 @@
                 />
 
             <TextView
-                android:id="@+id/myImageViewText"
+                android:id="@+id/with_images_antibes_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/with_images_antibes"
-                android:layout_alignTop="@+id/with_images_antibes"
                 android:layout_alignRight="@+id/with_images_antibes"
                 android:layout_alignBottom="@+id/with_images_antibes"
+                android:text="Antibes Table"
                 android:gravity="bottom|center"
                 android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -62,6 +64,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onBalustradeClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_balustrade_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_balustrade"
+                android:layout_alignRight="@+id/with_images_balustrade"
+                android:layout_alignBottom="@+id/with_images_balustrade"
+                android:text="Balustrade Base"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
 
@@ -77,6 +93,20 @@
                 android:onClick="onChowsideClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_chowside_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_chowside"
+                android:layout_alignRight="@+id/with_images_chowside"
+                android:layout_alignBottom="@+id/with_images_chowside"
+                android:text="Chowside Table"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_windsor"
                 android:layout_width="wrap_content"
@@ -89,6 +119,20 @@
                 android:onClick="onWindsorClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_windsor_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_windsor"
+                android:layout_alignRight="@+id/with_images_windsor"
+                android:layout_alignBottom="@+id/with_images_windsor"
+                android:text="Windsor"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_spanish_oval"
                 android:layout_width="wrap_content"
@@ -99,6 +143,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onSpanishOvalClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_spanish_oval_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_spanish_oval"
+                android:layout_alignRight="@+id/with_images_spanish_oval"
+                android:layout_alignBottom="@+id/with_images_spanish_oval"
+                android:text="Spanish Oval Table"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <!-- Sofas sorted by PRICE -->
@@ -116,6 +174,20 @@
                 android:onClick="onSpanishOvalClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_spanish_oval_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_spanish_oval_sorted"
+                android:layout_alignRight="@+id/with_images_spanish_oval_sorted"
+                android:layout_alignBottom="@+id/with_images_spanish_oval_sorted"
+                android:text="$3500 - Spanish Oval Table"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_antibes_sorted"
                 android:layout_width="wrap_content"
@@ -128,6 +200,20 @@
                 android:onClick="onAntibesClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_antibes_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_antibes_sorted"
+                android:layout_alignRight="@+id/with_images_antibes_sorted"
+                android:layout_alignBottom="@+id/with_images_antibes_sorted"
+                android:text="$2500 - Antibes Table"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_chowside_sorted"
                 android:layout_width="wrap_content"
@@ -138,6 +224,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onChowsideClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_chowside_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_chowside_sorted"
+                android:layout_alignRight="@+id/with_images_chowside_sorted"
+                android:layout_alignBottom="@+id/with_images_chowside_sorted"
+                android:text="$1750 - Chowside Table"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
 
@@ -153,6 +253,20 @@
                 android:onClick="onWindsorClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_windsor_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_windsor_sorted"
+                android:layout_alignRight="@+id/with_images_windsor_sorted"
+                android:layout_alignBottom="@+id/with_images_windsor_sorted"
+                android:text="$1500 - Windsor"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_balustrade_sorted"
                 android:layout_width="wrap_content"
@@ -163,6 +277,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onBalustradeClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_balustrade_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_balustrade_sorted"
+                android:layout_alignRight="@+id/with_images_balustrade_sorted"
+                android:layout_alignBottom="@+id/with_images_balustrade_sorted"
+                android:text="$1000 - Balustrade Base"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
 

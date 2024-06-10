@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class with_images_sofa_viewing extends AppCompatActivity {
 
     ImageView lancaster, gainsborough, lancaster_sorted, gainsborough_sorted;
+
+    TextView lancaster_text, gainsborough_text, lancaster_sorted_text, gainsborough_sorted_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,16 +32,23 @@ public class with_images_sofa_viewing extends AppCompatActivity {
         // Alpha sorted
         lancaster = findViewById(R.id.with_images_lancaster);
         gainsborough = findViewById(R.id.with_images_gainsborough);
+        lancaster_text = findViewById(R.id.with_images_lancaster_text);
+        gainsborough_text = findViewById(R.id.with_images_gainsborough_text);
 
         // Price sorted
         lancaster_sorted = findViewById(R.id.with_images_lancaster_sorted);
         gainsborough_sorted = findViewById(R.id.with_images_gainsborough_sorted);
+        lancaster_sorted_text = findViewById(R.id.with_images_lancaster_sorted_text);
+        gainsborough_sorted_text = findViewById(R.id.with_images_gainsborough_sorted_text);
 
         if(sorting_choice.equals("alpha")){
             lancaster.setVisibility(View.VISIBLE);
             lancaster.setClickable(true);
             gainsborough.setVisibility(View.VISIBLE);
             gainsborough.setClickable(true);
+
+            lancaster_text.setVisibility(View.VISIBLE);
+            gainsborough_text.setVisibility(View.VISIBLE);
         }
 
         else if (sorting_choice.equals("price")) {
@@ -46,6 +56,9 @@ public class with_images_sofa_viewing extends AppCompatActivity {
             lancaster_sorted.setClickable(true);
             gainsborough_sorted.setVisibility(View.VISIBLE);
             gainsborough_sorted.setClickable(true);
+
+            lancaster_sorted_text.setVisibility(View.VISIBLE);
+            gainsborough_sorted_text.setVisibility(View.VISIBLE);
         }
 
     }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,10 @@ public class with_images_chair_viewing extends AppCompatActivity {
 
     ImageView english_arm, loren_arm, louis_bar, louis_dining, louis_fireside, louis_library, louis_side, montalembert, queen_anne, tiges_arm;
     ImageView english_arm_sorted, loren_arm_sorted, louis_bar_sorted, louis_dining_sorted, louis_fireside_sorted, louis_library_sorted, louis_side_sorted, montalembert_sorted, queen_anne_sorted, tiges_arm_sorted;
+
+    TextView english_arm_text, loren_arm_text, louis_bar_text, louis_dining_text, louis_fireside_text, louis_library_text, louis_side_text, montalembert_text, queen_anne_text, tiges_arm_text;
+
+    TextView english_arm_sorted_text, loren_arm_sorted_text, louis_bar_sorted_text, louis_dining_sorted_text, louis_fireside_sorted_text, louis_library_sorted_text, louis_side_sorted_text, montalembert_sorted_text, queen_anne_sorted_text, tiges_arm_sorted_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,17 @@ public class with_images_chair_viewing extends AppCompatActivity {
         queen_anne = findViewById(R.id.with_images_queen_anne);
         tiges_arm = findViewById(R.id.with_images_tiges_arm);
 
+        english_arm_text = findViewById(R.id.with_images_english_arm_text);
+        loren_arm_text = findViewById(R.id.with_images_loren_arm_text);
+        louis_bar_text = findViewById(R.id.with_images_louis_bar_text);
+        louis_dining_text = findViewById(R.id.with_images_louis_dining_text);
+        louis_fireside_text = findViewById(R.id.with_images_louis_fireside_text);
+        louis_library_text = findViewById(R.id.with_images_louis_library_text);
+        louis_side_text = findViewById(R.id.with_images_louis_side_text);
+        montalembert_text = findViewById(R.id.with_images_montalembert_text);
+        queen_anne_text = findViewById(R.id.with_images_queen_anne_text);
+        tiges_arm_text = findViewById(R.id.with_images_tiges_arm_text);
+
         // Price Sorted Images
         english_arm_sorted = findViewById(R.id.with_images_english_arm_sorted);
         loren_arm_sorted = findViewById(R.id.with_images_loren_arm_sorted);
@@ -55,6 +71,17 @@ public class with_images_chair_viewing extends AppCompatActivity {
         montalembert_sorted = findViewById(R.id.with_images_montalembert_sorted);
         queen_anne_sorted = findViewById(R.id.with_images_queen_anne_sorted);
         tiges_arm_sorted = findViewById(R.id.with_images_tiges_arm_sorted);
+
+        english_arm_sorted_text = findViewById(R.id.with_images_english_arm_sorted_text);
+        loren_arm_sorted_text = findViewById(R.id.with_images_loren_arm_sorted_text);
+        louis_bar_sorted_text = findViewById(R.id.with_images_louis_bar_sorted_text);
+        louis_dining_sorted_text = findViewById(R.id.with_images_louis_dining_sorted_text);
+        louis_fireside_sorted_text = findViewById(R.id.with_images_louis_fireside_sorted_text);
+        louis_library_sorted_text = findViewById(R.id.with_images_louis_library_sorted_text);
+        louis_side_sorted_text = findViewById(R.id.with_images_louis_side_sorted_text);
+        montalembert_sorted_text = findViewById(R.id.with_images_montalembert_sorted_text);
+        queen_anne_sorted_text = findViewById(R.id.with_images_queen_anne_sorted_text);
+        tiges_arm_sorted_text = findViewById(R.id.with_images_tiges_arm_sorted_text);
 
         // Display the sorted chairs by alphabet
         if(sorting_choice.equals("alpha")) {
@@ -78,6 +105,17 @@ public class with_images_chair_viewing extends AppCompatActivity {
             queen_anne.setClickable(true);
             tiges_arm.setVisibility(View.VISIBLE);
             tiges_arm.setClickable(true);
+
+            english_arm_text.setVisibility(View.VISIBLE);
+            loren_arm_text.setVisibility(View.VISIBLE);
+            louis_bar_text.setVisibility(View.VISIBLE);
+            louis_dining_text.setVisibility(View.VISIBLE);
+            louis_fireside_text.setVisibility(View.VISIBLE);
+            louis_library_text.setVisibility(View.VISIBLE);
+            louis_side_text.setVisibility(View.VISIBLE);
+            montalembert_text.setVisibility(View.VISIBLE);
+            queen_anne_text.setVisibility(View.VISIBLE);
+            tiges_arm_text.setVisibility(View.VISIBLE);
         }
 
         // Display the sorted chairs by price descending
@@ -102,6 +140,17 @@ public class with_images_chair_viewing extends AppCompatActivity {
             queen_anne_sorted.setClickable(true);
             tiges_arm_sorted.setVisibility(View.VISIBLE);
             tiges_arm_sorted.setClickable(true);
+
+            english_arm_sorted_text.setVisibility(View.VISIBLE);
+            loren_arm_sorted_text.setVisibility(View.VISIBLE);
+            louis_bar_sorted_text.setVisibility(View.VISIBLE);
+            louis_dining_sorted_text.setVisibility(View.VISIBLE);
+            louis_fireside_sorted_text.setVisibility(View.VISIBLE);
+            louis_library_sorted_text.setVisibility(View.VISIBLE);
+            louis_side_sorted_text.setVisibility(View.VISIBLE);
+            montalembert_sorted_text.setVisibility(View.VISIBLE);
+            queen_anne_sorted_text.setVisibility(View.VISIBLE);
+            tiges_arm_sorted_text.setVisibility(View.VISIBLE);
         }
 
     }

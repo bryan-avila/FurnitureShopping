@@ -40,6 +40,20 @@
                 android:onClick="onGainsboroughClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_gainsborough_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_gainsborough"
+                android:layout_alignRight="@+id/with_images_gainsborough"
+                android:layout_alignBottom="@+id/with_images_gainsborough"
+                android:text="Gainsborough Sofa"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_lancaster"
                 android:layout_width="wrap_content"
@@ -50,6 +64,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLancasterClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_lancaster_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_lancaster"
+                android:layout_alignRight="@+id/with_images_lancaster"
+                android:layout_alignBottom="@+id/with_images_lancaster"
+                android:text="Lancaster Sofa"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <!-- Sofas sorted by PRICE -->
@@ -66,6 +94,20 @@
                 android:onClick="onLancasterClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_lancaster_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_lancaster_sorted"
+                android:layout_alignRight="@+id/with_images_lancaster_sorted"
+                android:layout_alignBottom="@+id/with_images_lancaster_sorted"
+                android:text="$7000 - Lancaster Sofa"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_gainsborough_sorted"
                 android:layout_width="wrap_content"
@@ -76,6 +118,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onGainsboroughClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_gainsborough_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_gainsborough_sorted"
+                android:layout_alignRight="@+id/with_images_gainsborough_sorted"
+                android:layout_alignBottom="@+id/with_images_gainsborough_sorted"
+                android:text="$5000 - Gainsborough Sofa"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
 

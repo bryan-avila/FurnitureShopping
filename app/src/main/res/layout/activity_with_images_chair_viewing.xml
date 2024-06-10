@@ -26,6 +26,10 @@
                 android:layout_centerHorizontal="true"
                 />
 
+            <!-- ALPHA SORTED -->
+            <!-- ALPHA SORTED -->
+            <!-- ALPHA SORTED -->
+
             <ImageView
                 android:id="@+id/with_images_english_arm"
                 android:layout_width="wrap_content"
@@ -35,6 +39,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onEnglishArmClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_english_arm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_english_arm"
+                android:layout_alignRight="@+id/with_images_english_arm"
+                android:layout_alignBottom="@+id/with_images_english_arm"
+                android:text="English Arm"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -50,6 +68,20 @@
                 android:onClick="onLorenArmClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_loren_arm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_loren_arm"
+                android:layout_alignRight="@+id/with_images_loren_arm"
+                android:layout_alignBottom="@+id/with_images_loren_arm"
+                android:text="Loren Arm"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_louis_bar"
                 android:layout_width="wrap_content"
@@ -63,6 +95,20 @@
                 android:onClick="onLouisBarClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_louis_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_bar"
+                android:layout_alignRight="@+id/with_images_louis_bar"
+                android:layout_alignBottom="@+id/with_images_louis_bar"
+                android:text="Louis Bar"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_louis_dining"
                 android:layout_width="wrap_content"
@@ -72,6 +118,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLouisDiningClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_dining_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_dining"
+                android:layout_alignRight="@+id/with_images_louis_dining"
+                android:layout_alignBottom="@+id/with_images_louis_dining"
+                android:text="Louis Dining"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -87,6 +147,20 @@
                 android:onClick="onFireSideClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_louis_fireside_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_fireside"
+                android:layout_alignRight="@+id/with_images_louis_fireside"
+                android:layout_alignBottom="@+id/with_images_louis_fireside"
+                android:text="Louis FireSide"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_louis_library"
                 android:layout_width="wrap_content"
@@ -96,6 +170,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLouisLibraryClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_library_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_library"
+                android:layout_alignRight="@+id/with_images_louis_library"
+                android:layout_alignBottom="@+id/with_images_louis_library"
+                android:text="Louis Library"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -111,6 +199,20 @@
                 android:onClick="onLouisSideClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_louis_side_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_side"
+                android:layout_alignRight="@+id/with_images_louis_side"
+                android:layout_alignBottom="@+id/with_images_louis_side"
+                android:text="Louis Side"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_montalembert"
                 android:layout_width="wrap_content"
@@ -124,6 +226,20 @@
                 android:onClick="onMontalembertClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_montalembert_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_montalembert"
+                android:layout_alignRight="@+id/with_images_montalembert"
+                android:layout_alignBottom="@+id/with_images_montalembert"
+                android:text="Montalembert"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
             <ImageView
                 android:id="@+id/with_images_queen_anne"
                 android:layout_width="wrap_content"
@@ -133,6 +249,20 @@
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onQueenAnneClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_queen_anne_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_queen_anne"
+                android:layout_alignRight="@+id/with_images_queen_anne"
+                android:layout_alignBottom="@+id/with_images_queen_anne"
+                android:text="Queen Anne"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
 
@@ -149,6 +279,20 @@
                 android:onClick="onTigesArmClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_tiges_arm_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_tiges_arm"
+                android:layout_alignRight="@+id/with_images_tiges_arm"
+                android:layout_alignBottom="@+id/with_images_tiges_arm"
+                android:text="Tiges Arm"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
+
 
             <!-- Sorted By Price -->
             <!-- Sorted By Price -->
@@ -158,10 +302,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/chair_english_arm"
+                android:layout_alignParentStart="true"
                 android:layout_marginTop="500dp"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onEnglishArmClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_english_arm_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_english_arm_sorted"
+                android:layout_alignRight="@+id/with_images_english_arm_sorted"
+                android:layout_alignBottom="@+id/with_images_english_arm_sorted"
+                android:text="$1500 - English Arm"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -170,11 +329,24 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/chair_loren_arm"
                 android:layout_marginTop="500dp"
-                android:layout_toRightOf="@id/with_images_english_arm_sorted"
-                android:layout_marginLeft="50dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLorenArmClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_loren_arm_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_loren_arm_sorted"
+                android:layout_alignRight="@+id/with_images_loren_arm_sorted"
+                android:layout_alignBottom="@+id/with_images_loren_arm_sorted"
+                android:text="$1300 - Loren Arm"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -182,12 +354,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/chair_louis_bar"
-                android:layout_marginTop="500dp"
-                android:layout_toRightOf="@id/with_images_loren_arm_sorted"
-                android:layout_marginLeft="55dp"
+                android:layout_marginTop="720dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLouisBarClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_bar_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_bar_sorted"
+                android:layout_alignRight="@+id/with_images_louis_bar_sorted"
+                android:layout_alignBottom="@+id/with_images_louis_bar_sorted"
+                android:text="$1000 - Louis Bar"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -196,9 +381,24 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/chair_louis_dining"
                 android:layout_marginTop="720dp"
+                android:layout_alignParentStart="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLouisDiningClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_dining_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_dining_sorted"
+                android:layout_alignRight="@+id/with_images_louis_dining_sorted"
+                android:layout_alignBottom="@+id/with_images_louis_dining_sorted"
+                android:text="$1000 - Louis Dining"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -207,9 +407,24 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/chair_louis_fireside_wing_ottoman_combo"
                 android:layout_marginTop="55dp"
+                android:layout_alignParentStart="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onFireSideClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_fireside_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_fireside_sorted"
+                android:layout_alignRight="@+id/with_images_louis_fireside_sorted"
+                android:layout_alignBottom="@+id/with_images_louis_fireside_sorted"
+                android:text="$5500 - Louis FireSide"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -218,24 +433,50 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/chair_louis_library"
                 android:layout_marginTop="275dp"
-                android:layout_toRightOf="@id/with_images_montalembert_sorted"
-                android:layout_marginLeft="30dp"
+                android:layout_centerHorizontal="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLouisLibraryClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_library_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_library_sorted"
+                android:layout_alignRight="@+id/with_images_louis_library_sorted"
+                android:layout_alignBottom="@+id/with_images_louis_library_sorted"
+                android:text="$1800 - Louis Library"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
                 android:id="@+id/with_images_louis_side_sorted"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="720dp"
-                android:layout_toRightOf="@id/with_images_louis_dining_sorted"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="500dp"
+                android:layout_alignParentEnd="true"
                 android:src="@drawable/chair_louis_side"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onLouisSideClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_louis_side_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_louis_side_sorted"
+                android:layout_alignRight="@+id/with_images_louis_side_sorted"
+                android:layout_alignBottom="@+id/with_images_louis_side_sorted"
+                android:text="$1200 - Louis Side"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -243,10 +484,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="275dp"
+                android:layout_alignParentStart="true"
                 android:src="@drawable/chair_montalembert"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onMontalembertClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_montalembert_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_montalembert_sorted"
+                android:layout_alignRight="@+id/with_images_montalembert_sorted"
+                android:layout_alignBottom="@+id/with_images_montalembert_sorted"
+                android:text="$1800 - Montalembert"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -254,12 +510,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="180dp"
                 android:src="@drawable/chair_queen_anne_arm"
-                android:layout_toRightOf="@id/with_images_louis_library_sorted"
-                android:layout_marginLeft="35dp"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="275dp"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onQueenAnneClick"
+                />
+
+            <TextView
+                android:id="@+id/with_images_queen_anne_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_queen_anne_sorted"
+                android:layout_alignRight="@+id/with_images_queen_anne_sorted"
+                android:layout_alignBottom="@+id/with_images_queen_anne_sorted"
+                android:text="$1700 - Queen Anne"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
                 />
 
             <ImageView
@@ -268,13 +537,25 @@
                 android:layout_height="180dp"
                 android:src="@drawable/chair_tiges_armchair"
                 android:layout_marginTop="55dp"
-                android:layout_toRightOf="@id/with_images_louis_fireside_sorted"
-                android:layout_marginLeft="50dp"
+                android:layout_alignParentEnd="true"
                 android:visibility="invisible"
                 android:clickable="false"
                 android:onClick="onTigesArmClick"
                 />
 
+            <TextView
+                android:id="@+id/with_images_tiges_arm_sorted_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/with_images_tiges_arm_sorted"
+                android:layout_alignRight="@+id/with_images_tiges_arm_sorted"
+                android:layout_alignBottom="@+id/with_images_tiges_arm_sorted"
+                android:text="$1900 - Tiges Arm"
+                android:gravity="bottom|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:visibility="invisible"
+                />
 
         </RelativeLayout>
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class with_images_mirror_viewing extends AppCompatActivity {
 
     ImageView charmont, von_howe, charmont_sorted, von_howe_sorted;
+
+    TextView charmont_text, von_howe_text, charmont_sorted_text, von_howe_sorted_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,25 +34,33 @@ public class with_images_mirror_viewing extends AppCompatActivity {
         // Alpha sorted
         charmont = findViewById(R.id.with_images_charmont);
         von_howe = findViewById(R.id.with_images_von_howe);
+        charmont_text = findViewById(R.id.with_images_charmont_text);
+        von_howe_text = findViewById(R.id.with_images_von_howe_text);
 
         // Price sorted
         charmont_sorted = findViewById(R.id.with_images_charmont_sorted);
         von_howe_sorted = findViewById(R.id.with_images_von_howe_sorted);
+        charmont_sorted_text = findViewById(R.id.with_images_charmont_sorted_text);
+        von_howe_sorted_text = findViewById(R.id.with_images_von_howe_sorted_text);
 
         if(sorting_choice.equals("alpha")) {
             charmont.setVisibility(View.VISIBLE);
             charmont.setClickable(true);
-
             von_howe.setVisibility(View.VISIBLE);
             von_howe.setClickable(true);
+
+            charmont_text.setVisibility(View.VISIBLE);
+            von_howe_text.setVisibility(View.VISIBLE);
         }
 
         else if(sorting_choice.equals("price")) {
             charmont_sorted.setVisibility(View.VISIBLE);
             charmont_sorted.setClickable(true);
-
             von_howe_sorted.setVisibility(View.VISIBLE);
             von_howe_sorted.setClickable(true);
+
+            charmont_sorted_text.setVisibility(View.VISIBLE);
+            von_howe_sorted_text.setVisibility(View.VISIBLE);
         }
 
 
