@@ -1,9 +1,11 @@
 package com.app.shoppingapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -21,6 +23,8 @@ public class with_images_chair_viewing extends AppCompatActivity {
 
     TextView english_arm_sorted_text, loren_arm_sorted_text, louis_bar_sorted_text, louis_dining_sorted_text, louis_fireside_sorted_text, louis_library_sorted_text, louis_side_sorted_text, montalembert_sorted_text, queen_anne_sorted_text, tiges_arm_sorted_text;
 
+    Button price_sort, alpha_sort;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +35,11 @@ public class with_images_chair_viewing extends AppCompatActivity {
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
         String sorting_choice = bundle.getString("sorting_choice");
+
+        // Buttons for sorting
+        price_sort = findViewById(R.id.with_images_viewing_price_sort);
+        alpha_sort = findViewById(R.id.with_images_viewing_alpha_sort);
+
         displaySortedItems(sorting_choice);
 
     }
@@ -116,6 +125,8 @@ public class with_images_chair_viewing extends AppCompatActivity {
             montalembert_text.setVisibility(View.VISIBLE);
             queen_anne_text.setVisibility(View.VISIBLE);
             tiges_arm_text.setVisibility(View.VISIBLE);
+
+            alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
         }
 
         // Display the sorted chairs by price descending
@@ -151,6 +162,9 @@ public class with_images_chair_viewing extends AppCompatActivity {
             montalembert_sorted_text.setVisibility(View.VISIBLE);
             queen_anne_sorted_text.setVisibility(View.VISIBLE);
             tiges_arm_sorted_text.setVisibility(View.VISIBLE);
+
+            price_sort.setBackgroundResource(R.color.pumpkin_orange);
+
         }
 
     }
@@ -226,6 +240,89 @@ public class with_images_chair_viewing extends AppCompatActivity {
         intent.putExtra("choice", "tiges_arm");
         intent.putExtra("page", "chairs");
         startActivity(intent);
+
+    }
+
+    public void onAlphaSortClick(View view) {
+        alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
+        price_sort.setBackgroundColor(Color.GRAY);
+
+        english_arm_sorted.setVisibility(View.INVISIBLE);
+        english_arm_sorted.setClickable(false);
+        loren_arm_sorted.setVisibility(View.INVISIBLE);
+        loren_arm_sorted.setClickable(false);
+        louis_bar_sorted.setVisibility(View.INVISIBLE);
+        louis_bar_sorted.setClickable(false);
+        louis_dining_sorted.setVisibility(View.INVISIBLE);
+        louis_dining_sorted.setClickable(false);
+        louis_fireside_sorted.setVisibility(View.INVISIBLE);
+        louis_fireside_sorted.setClickable(false);
+        louis_library_sorted.setVisibility(View.INVISIBLE);
+        louis_library_sorted.setClickable(false);
+        louis_side_sorted.setVisibility(View.INVISIBLE);
+        louis_side_sorted.setClickable(false);
+        montalembert_sorted.setVisibility(View.INVISIBLE);
+        montalembert_sorted.setClickable(false);
+        queen_anne_sorted.setVisibility(View.INVISIBLE);
+        queen_anne_sorted.setClickable(false);
+        tiges_arm_sorted.setVisibility(View.INVISIBLE);
+        tiges_arm_sorted.setClickable(false);
+
+        english_arm_sorted_text.setVisibility(View.INVISIBLE);
+        loren_arm_sorted_text.setVisibility(View.INVISIBLE);
+        louis_bar_sorted_text.setVisibility(View.INVISIBLE);
+        louis_dining_sorted_text.setVisibility(View.INVISIBLE);
+        louis_fireside_sorted_text.setVisibility(View.INVISIBLE);
+        louis_library_sorted_text.setVisibility(View.INVISIBLE);
+        louis_side_sorted_text.setVisibility(View.INVISIBLE);
+        montalembert_sorted_text.setVisibility(View.INVISIBLE);
+        queen_anne_sorted_text.setVisibility(View.INVISIBLE);
+        tiges_arm_sorted_text.setVisibility(View.INVISIBLE);
+
+        displaySortedItems("alpha");
+        Toast.makeText(with_images_chair_viewing.this, "Sorting Alphabetically", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void onPriceSortClick(View view) {
+
+        alpha_sort.setBackgroundColor(Color.GRAY);
+        price_sort.setBackgroundResource(R.color.pumpkin_orange);
+
+        english_arm.setVisibility(View.INVISIBLE);
+        english_arm.setClickable(false);
+        loren_arm.setVisibility(View.INVISIBLE);
+        loren_arm.setClickable(false);
+        louis_bar.setVisibility(View.INVISIBLE);
+        louis_bar.setClickable(false);
+        louis_dining.setVisibility(View.INVISIBLE);
+        louis_dining.setClickable(false);
+        louis_fireside.setVisibility(View.INVISIBLE);
+        louis_fireside.setClickable(false);
+        louis_library.setVisibility(View.INVISIBLE);
+        louis_library.setClickable(false);
+        louis_side.setVisibility(View.INVISIBLE);
+        louis_side.setClickable(false);
+        montalembert.setVisibility(View.INVISIBLE);
+        montalembert.setClickable(false);
+        queen_anne.setVisibility(View.INVISIBLE);
+        queen_anne.setClickable(false);
+        tiges_arm.setVisibility(View.INVISIBLE);
+        tiges_arm.setClickable(false);
+
+        english_arm_text.setVisibility(View.INVISIBLE);
+        loren_arm_text.setVisibility(View.INVISIBLE);
+        louis_bar_text.setVisibility(View.INVISIBLE);
+        louis_dining_text.setVisibility(View.INVISIBLE);
+        louis_fireside_text.setVisibility(View.INVISIBLE);
+        louis_library_text.setVisibility(View.INVISIBLE);
+        louis_side_text.setVisibility(View.INVISIBLE);
+        montalembert_text.setVisibility(View.INVISIBLE);
+        queen_anne_text.setVisibility(View.INVISIBLE);
+        tiges_arm_text.setVisibility(View.INVISIBLE);
+
+        displaySortedItems("price");
+        Toast.makeText(with_images_chair_viewing.this, "Sorting by Price", Toast.LENGTH_SHORT).show();
 
     }
 }

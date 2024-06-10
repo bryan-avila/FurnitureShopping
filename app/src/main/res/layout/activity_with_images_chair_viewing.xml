@@ -1,14 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_with_images_basic_gradient"
     tools:context=".with_images_chair_viewing">
 
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_with_sort_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/light_black">
+
+        <Button
+            android:id="@+id/with_images_viewing_alpha_sort"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/darker_grey"
+            android:drawableBottom="@drawable/baseline_sort_by_alpha_24"
+            android:text="Alpha Sort"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:clickable="true"
+            android:onClick="onAlphaSortClick"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:id="@+id/with_images_viewing_price_sort"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@color/darker_grey"
+            android:drawableBottom="@drawable/baseline_price_change_24"
+            android:text="Price Sort"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:clickable="true"
+            android:onClick="onPriceSortClick"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
     <ScrollView
+        android:id="@+id/scroll_view_chair_viewing"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative_layout_with_sort_buttons"
+        android:fillViewport="true"
+        android:layout_marginTop="15dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -561,4 +601,4 @@
 
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>
