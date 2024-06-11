@@ -2,6 +2,7 @@ package com.app.shoppingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -133,6 +134,13 @@ public class with_images_furniture_viewing extends AppCompatActivity {
 
     public void onPurchaseClick(View view) {
         Toast.makeText(with_images_furniture_viewing.this, "Bought!", Toast.LENGTH_SHORT).show();
+    }
+
+    // Allow users to exit to the home page of the version with images
+    public void onHomeButtonClick(View view) {
+        Intent intent = new Intent(with_images_furniture_viewing.this, with_images_home_page.class);
+        startActivity(intent);
+        finish();
     }
 
 }

@@ -7,6 +7,18 @@
     android:background="@drawable/background_full_grey"
     tools:context=".with_images_furniture_viewing">
 
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:drawableStart="@drawable/ic_home_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:onClick="onHomeButtonClick"/>
+
     <TextView
         android:id="@+id/text_view_furniture_product_name_ver_2"
         android:layout_width="wrap_content"

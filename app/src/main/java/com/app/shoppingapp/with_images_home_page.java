@@ -90,7 +90,7 @@ public class with_images_home_page extends AppCompatActivity {
 
     // If they click on shopping cart button
     public void onShoppingCartClick(View view) {
-        Toast.makeText(with_images_home_page.this, "Shopping Cart Not Yet Implemented", Toast.LENGTH_SHORT).show();
+        Toast.makeText(with_images_home_page.this, "Not Implemented", Toast.LENGTH_SHORT).show();
     }
 
 }

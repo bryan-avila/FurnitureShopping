@@ -1,9 +1,11 @@
 package com.app.shoppingapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +17,8 @@ public class with_images_table_viewing extends AppCompatActivity {
     ImageView antibes, balustrade, chowside, windsor, spanish_oval, antibes_sorted, balustrade_sorted, chowside_sorted, windsor_sorted, spanish_oval_sorted;
     TextView antibes_text, balustrade_text, chowside_text, windsor_text, spanish_oval_text;
     TextView antibes_sorted_text, balustrade_sorted_text, chowside_sorted_text, windsor_sorted_text, spanish_oval_sorted_text;
-
+    boolean alreadyAlphaSorted, alreadyPriceSorted;
+    Button price_sort, alpha_sort;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,10 @@ public class with_images_table_viewing extends AppCompatActivity {
 
 
         getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
+
+        // Buttons for sorting
+        price_sort = findViewById(R.id.with_images_viewing_price_sort);
+        alpha_sort = findViewById(R.id.with_images_viewing_alpha_sort);
 
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
@@ -78,6 +85,10 @@ public class with_images_table_viewing extends AppCompatActivity {
             chowside_text.setVisibility(View.VISIBLE);
             windsor_text.setVisibility(View.VISIBLE);
             spanish_oval_text.setVisibility(View.VISIBLE);
+
+            alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
+            alreadyAlphaSorted = true;
+            alreadyPriceSorted = false;
         }
 
         else if (sorting_choice.equals("price")) {
@@ -99,6 +110,10 @@ public class with_images_table_viewing extends AppCompatActivity {
             chowside_sorted_text.setVisibility(View.VISIBLE);
             windsor_sorted_text.setVisibility(View.VISIBLE);
             spanish_oval_sorted_text.setVisibility(View.VISIBLE);
+
+            price_sort.setBackgroundResource(R.color.pumpkin_orange);
+            alreadyAlphaSorted = false;
+            alreadyPriceSorted = true;
 
         }
 
@@ -137,6 +152,74 @@ public class with_images_table_viewing extends AppCompatActivity {
         intent.putExtra("choice", "spanish_oval");
         intent.putExtra("page", "table");
         startActivity(intent);
+    }
+
+    public void onAlphaSortClick(View view) {
+        // If not yet alpha sorted, then remove price sort and then do alpha sort
+        if(!alreadyAlphaSorted) {
+            alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
+            price_sort.setBackgroundColor(Color.GRAY);
+
+            antibes_sorted.setVisibility(View.INVISIBLE);
+            antibes_sorted.setClickable(false);
+            balustrade_sorted.setVisibility(View.INVISIBLE);
+            balustrade_sorted.setClickable(false);
+            chowside_sorted.setVisibility(View.INVISIBLE);
+            chowside_sorted.setClickable(false);
+            windsor_sorted.setVisibility(View.INVISIBLE);
+            windsor_sorted.setClickable(false);
+            spanish_oval_sorted.setVisibility(View.INVISIBLE);
+            spanish_oval_sorted.setClickable(false);
+
+            antibes_sorted_text.setVisibility(View.INVISIBLE);
+            balustrade_sorted_text.setVisibility(View.INVISIBLE);
+            chowside_sorted_text.setVisibility(View.INVISIBLE);
+            windsor_sorted_text.setVisibility(View.INVISIBLE);
+            spanish_oval_sorted_text.setVisibility(View.INVISIBLE);
+
+            alreadyAlphaSorted = true;
+            alreadyPriceSorted = false;
+            displaySortedItems("alpha");
+        }
+        // Else, display a toast warning
+        else if(alreadyAlphaSorted) {
+            Toast.makeText(with_images_table_viewing.this, "Already Alphabetically Sorted", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void onPriceSortClick(View view) {
+        if(!alreadyPriceSorted) {
+            alpha_sort.setBackgroundColor(Color.GRAY);
+            price_sort.setBackgroundResource(R.color.pumpkin_orange);
+
+            antibes.setVisibility(View.INVISIBLE);
+            antibes.setClickable(false);
+            balustrade.setVisibility(View.INVISIBLE);
+            balustrade.setClickable(false);
+            chowside.setVisibility(View.INVISIBLE);
+            chowside.setClickable(false);
+            windsor.setVisibility(View.INVISIBLE);
+            windsor.setClickable(false);
+            spanish_oval.setVisibility(View.INVISIBLE);
+            spanish_oval.setClickable(false);
+
+            antibes_text.setVisibility(View.INVISIBLE);
+            balustrade_text.setVisibility(View.INVISIBLE);
+            chowside_text.setVisibility(View.INVISIBLE);
+            windsor_text.setVisibility(View.INVISIBLE);
+            spanish_oval_text.setVisibility(View.INVISIBLE);
+
+            alreadyAlphaSorted = false;
+            alreadyPriceSorted = true;
+            displaySortedItems("price");
+
+        }
+        // Else, display a toast warning
+        else if(alreadyPriceSorted) {
+            Toast.makeText(with_images_table_viewing.this, "Already Price Sorted", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
 }

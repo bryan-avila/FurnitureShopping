@@ -1,8 +1,10 @@
 package com.app.shoppingapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,12 +16,20 @@ public class with_images_sofa_viewing extends AppCompatActivity {
     ImageView lancaster, gainsborough, lancaster_sorted, gainsborough_sorted;
 
     TextView lancaster_text, gainsborough_text, lancaster_sorted_text, gainsborough_sorted_text;
+
+    Button price_sort, alpha_sort;
+    boolean alreadyAlphaSorted, alreadyPriceSorted;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_with_images_sofa_viewing);
 
         getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
+
+
+        // Buttons for sorting
+        price_sort = findViewById(R.id.with_images_viewing_price_sort);
+        alpha_sort = findViewById(R.id.with_images_viewing_alpha_sort);
 
         // Get information from intent passed from with_images_home_page
         Bundle bundle = getIntent().getExtras();
@@ -49,6 +59,10 @@ public class with_images_sofa_viewing extends AppCompatActivity {
 
             lancaster_text.setVisibility(View.VISIBLE);
             gainsborough_text.setVisibility(View.VISIBLE);
+
+            alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
+            alreadyAlphaSorted = true;
+            alreadyPriceSorted = false;
         }
 
         else if (sorting_choice.equals("price")) {
@@ -59,6 +73,10 @@ public class with_images_sofa_viewing extends AppCompatActivity {
 
             lancaster_sorted_text.setVisibility(View.VISIBLE);
             gainsborough_sorted_text.setVisibility(View.VISIBLE);
+
+            price_sort.setBackgroundResource(R.color.pumpkin_orange);
+            alreadyPriceSorted = true;
+            alreadyAlphaSorted = false;
         }
 
     }
@@ -74,5 +92,53 @@ public class with_images_sofa_viewing extends AppCompatActivity {
         intent.putExtra("choice", "lancaster");
         intent.putExtra("page", "sofa");
         startActivity(intent);
+    }
+
+    public void onAlphaSortClick(View view) {
+        // If not yet alpha sorted, then remove the price sorted view and display the alpha sorted one
+        if (!alreadyAlphaSorted) {
+            alpha_sort.setBackgroundResource(R.color.pumpkin_orange);
+            price_sort.setBackgroundColor(Color.GRAY);
+            lancaster_sorted.setVisibility(View.INVISIBLE);
+            lancaster_sorted.setClickable(false);
+            gainsborough_sorted.setVisibility(View.INVISIBLE);
+            gainsborough_sorted.setClickable(false);
+
+            lancaster_sorted_text.setVisibility(View.INVISIBLE);
+            gainsborough_sorted_text.setVisibility(View.INVISIBLE);
+
+            alreadyAlphaSorted = true;
+            alreadyPriceSorted = false;
+            displaySortedItems("alpha");
+        }
+        // Else, display a warning toast message
+        else if (alreadyAlphaSorted) {
+            Toast.makeText(with_images_sofa_viewing.this, "Already Alphabetically Sorted", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void onPriceSortClick(View view) {
+        // If not yet price sorted, remove the alpha sorted view and display the price sorted view
+        if (!alreadyPriceSorted) {
+            alpha_sort.setBackgroundColor(Color.GRAY);
+            price_sort.setBackgroundResource(R.color.pumpkin_orange);
+            lancaster.setVisibility(View.INVISIBLE);
+            lancaster.setClickable(false);
+            gainsborough.setVisibility(View.INVISIBLE);
+            gainsborough.setClickable(false);
+
+            lancaster_text.setVisibility(View.INVISIBLE);
+            gainsborough_text.setVisibility(View.INVISIBLE);
+
+            alreadyAlphaSorted = false;
+            alreadyPriceSorted = true;
+            displaySortedItems("price");
+        }
+        // Else, display a toast warning
+        else if (alreadyPriceSorted) {
+            Toast.makeText(with_images_sofa_viewing.this, "Already Price Sorted", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
