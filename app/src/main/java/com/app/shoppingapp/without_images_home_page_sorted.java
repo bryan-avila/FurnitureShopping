@@ -10,6 +10,7 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class without_images_home_page_sorted extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
 
@@ -17,7 +18,8 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_without_images_home_page_sorted);
-        getSupportActionBar().setTitle("Fitt's Furniture (Menu...)");
+        getSupportActionBar().setTitle("Fitt's Furniture");
+
     }
 
     // Display menu in home page
@@ -26,7 +28,40 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.category_page_menu, menu);
+        // Highlight the current sorting choice, which is Price.
+        menu.findItem(R.id.menu_item_price_sort).setIcon(ContextCompat.getDrawable(this, R.drawable.baseline_price_change_pumpking_orange_24));
         return true;
+    }
+
+    // Give functionality to clicking on the top bar menu icons
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if(item.getItemId() == R.id.menu_item_shopping_cart) {
+            Toast.makeText(this, "Shopping Cart Not Yet Implemented", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        // Give functionality to the sort price
+        else if(item.getItemId() == R.id.menu_item_price_sort) {
+            Toast.makeText(this, "Already sorted by price!", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        // Give functionality to sort alphabetically
+        else if(item.getItemId() == R.id.menu_item_alpha_sort) {
+            Intent intent = new Intent(without_images_home_page_sorted.this, without_images_home_page.class);
+            Toast.makeText(this, "Sorted Alphabetically", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+            finish(); // Prevent users from going back via back button
+            return true;
+        }
+        // Give functionality to return to main page
+        else if(item.getItemId() == R.id.menu_item_main_page) {
+            Intent intent = new Intent(without_images_home_page_sorted.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else
+            return super.onOptionsItemSelected(item);
     }
     @Override
     public boolean onMenuItemClick(MenuItem item) {
@@ -171,6 +206,7 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
         return true;
     }
 
+    // Onclick implementation of categories
     public void showChairsPSPopUp(View view) {
         PopupMenu chairs_popup = new PopupMenu(this, view);
         chairs_popup.setOnMenuItemClickListener(this);
@@ -206,31 +242,4 @@ public class without_images_home_page_sorted extends AppCompatActivity implement
         chandeliers_popup.show();
     }
 
-    // Give functionality to clicking on the menu
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        if(item.getItemId() == R.id.menu_item_shopping_cart)
-        {
-            Toast.makeText(this, "Shopping Cart Not Yet Implemented", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        // Give functionality to the sort price
-        else if(item.getItemId() == R.id.menu_item_price_sort)
-        {
-            Toast.makeText(this, "Already sorted by price!", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-        // Give functionality to sort alphabetically
-        else if(item.getItemId() == R.id.menu_item_alpha_sort)
-        {
-            Intent intent = new Intent(without_images_home_page_sorted.this, without_images_home_page.class);
-            Toast.makeText(this, "Sorted Alphabetically", Toast.LENGTH_LONG).show();
-            startActivity(intent);
-            finish(); // Prevent users from going back via back button
-            return true;
-        }
-        else
-            return super.onOptionsItemSelected(item);
-    }
 }

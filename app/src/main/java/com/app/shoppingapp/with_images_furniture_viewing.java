@@ -10,7 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class with_images_furniture_viewing extends AppCompatActivity {
-
     TextView product_price, product_eta, product_finish, furniture_name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +130,6 @@ public class with_images_furniture_viewing extends AppCompatActivity {
         product_finish = findViewById(R.id.item_view_material_finish_ver_2);
         product_finish.setText(furnMaterial);
     }
-
     public void onPurchaseClick(View view) {
         Toast.makeText(with_images_furniture_viewing.this, "Bought!", Toast.LENGTH_SHORT).show();
     }
@@ -140,7 +138,6 @@ public class with_images_furniture_viewing extends AppCompatActivity {
     public void onHomeButtonClick(View view) {
         Intent intent = new Intent(with_images_furniture_viewing.this, with_images_home_page.class);
         startActivity(intent);
-        finish();
     }
 
 }

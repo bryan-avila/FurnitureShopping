@@ -10,14 +10,16 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
-public class without_images_home_page extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
+public class without_images_home_page extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_without_images_home_page);
-        getSupportActionBar().setTitle("Fitt's Furniture (Menu...)");
+        getSupportActionBar().setTitle("Fitt's Furniture");
+
     }
 
     // Display menu in home page
@@ -26,6 +28,9 @@ public class without_images_home_page extends AppCompatActivity implements Popup
 
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.category_page_menu, menu);
+
+        // Highlight the current sorting choice, which is Alphabetical.
+        menu.findItem(R.id.menu_item_alpha_sort).setIcon(ContextCompat.getDrawable(this, R.drawable.baseline_sort_by_alpha_pumpking_orange_24));
         return true;
     }
 
@@ -33,27 +38,31 @@ public class without_images_home_page extends AppCompatActivity implements Popup
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if(item.getItemId() == R.id.menu_item_shopping_cart)
-        {
+        if(item.getItemId() == R.id.menu_item_shopping_cart) {
             Toast.makeText(this, "Shopping Cart Not Yet Implemented", Toast.LENGTH_SHORT).show();
             return true;
         }
         // Give functionality to the sort price
-        else if(item.getItemId() == R.id.menu_item_price_sort)
-        {
+        else if(item.getItemId() == R.id.menu_item_price_sort) {
             Intent intent = new Intent(without_images_home_page.this, without_images_home_page_sorted.class);
-            Toast.makeText(this, "Sorted By Price", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Sorted By Price", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish(); // Prevent users from going back via back button
 
             return true;
         }
         // Give functionality to sort alphabetically
-        else if(item.getItemId() == R.id.menu_item_alpha_sort)
-        {
+        else if(item.getItemId() == R.id.menu_item_alpha_sort) {
             Toast.makeText(this, "Already sorted Alphabetically!", Toast.LENGTH_SHORT).show();
             return true;
         }
+        // Give functionality to return to main page
+        else if(item.getItemId() == R.id.menu_item_main_page) {
+            Intent intent = new Intent(without_images_home_page.this, MainActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
         else
             return super.onOptionsItemSelected(item);
     }
@@ -202,6 +211,7 @@ public class without_images_home_page extends AppCompatActivity implements Popup
         return true;
     }
 
+    // Onclick implementation of categories
     public void showChairsPopUp(View view) {
         PopupMenu chairs_popup = new PopupMenu(this, view);
         chairs_popup.setOnMenuItemClickListener(this);

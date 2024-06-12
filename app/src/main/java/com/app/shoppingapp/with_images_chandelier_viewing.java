@@ -26,7 +26,6 @@ public class with_images_chandelier_viewing extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Fitt's Furniture (With Images)");
 
-
         // Buttons for sorting
         price_sort = findViewById(R.id.with_images_viewing_price_sort);
         alpha_sort = findViewById(R.id.with_images_viewing_alpha_sort);
@@ -115,6 +114,8 @@ public class with_images_chandelier_viewing extends AppCompatActivity {
         }
 
     }
+
+    // Each furniture gets their own "onClick", taken from the XML.
     public void onChantillyClick(View view) {
         Intent intent = new Intent(with_images_chandelier_viewing.this, with_images_furniture_viewing.class);
         intent.putExtra("choice", "chantilly");

@@ -12,8 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select The Version to View:"
-        android:textSize="25sp"
+        android:textSize="27sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,9 +23,10 @@
 
     <Button
         android:id="@+id/without_button"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:text="With Images"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.129"
@@ -35,9 +37,10 @@
 
     <Button
         android:id="@+id/with_button"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
         android:text="Without Images"
+        android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.852"

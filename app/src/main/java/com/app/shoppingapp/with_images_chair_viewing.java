@@ -177,6 +177,7 @@ public class with_images_chair_viewing extends AppCompatActivity {
 
     }
 
+    // Each furniture gets their own "onClick", taken from the XML.
     public void onEnglishArmClick(View view) {
         Intent intent = new Intent(with_images_chair_viewing.this, with_images_furniture_viewing.class);
         intent.putExtra("choice", "english_arm");
